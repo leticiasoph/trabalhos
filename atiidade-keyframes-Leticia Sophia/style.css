@@ -1,0 +1,28 @@
+     button {
+            position: relative;
+            padding: 15px 30px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            animation: mover 4s infinite;
+        }
+
+        @keyframes mover {
+            0% {
+                left: 0px;
+                background-color: rgb(255, 0, 162);
+            }
+
+            50% {
+                left: 300px;
+                background-color: red;
+            }
+
+            100% {
+                left: 0px;
+                background-color: rgb(239, 241, 107);
+            }
+        }
+
