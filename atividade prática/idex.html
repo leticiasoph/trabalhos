@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Viagem</title>
+
+    <style>
+        body {
+            background-color: rgb(203, 152, 168);
+            text-align: center;
+            font-family: Arial;
+        }
+
+        h1 {
+            color: deeppink;
+        }
+
+        button {
+            background-color: rgb(191, 109, 156);
+            color: white;
+            border: none;
+            padding: 8px;
+            margin: 5px;
+        }
+
+        #mensagem {
+            font-size: 20px;
+        }
+
+        #contador {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="titulo">Minha Viagem 💗</h1>
+
+    <p>Digite uma cidade:</p>
+
+    <input id="cidade">
+
+    <button onclick="mostrarCidade()">Mostrar</button>
+
+    <p id="mensagem"></p>
+
+    <button onclick="destacarMensagem()">Destacar mensagem</button>
+
+    <h2>Contador</h2>
+
+    <button onclick="diminuir()">-</button>
+
+    <span id="contador">10</span>
+
+    <button onclick="aumentar()">+</button>
+
+    <script>
+        let numero = 10;
+
+        function mostrarCidade() {
+            let cidade = document.getElementById("cidade").value;
+            document.getElementById("mensagem").textContent =
+                "Quero conhecer " + cidade + "! 💕";
+        }
+
+        function destacarMensagem() {
+            document.getElementById("mensagem").style.color = "deeppink";
+            document.getElementById("mensagem").style.fontSize = "30px";
+        }
+
+        function aumentar() {
+            numero++;
+            document.getElementById("contador").textContent = numero;
+        }
+
+        function diminuir() {
+            numero--;
+            document.getElementById("contador").textContent = numero;
+        }
+    </script>
+
+</body>
+</html>
